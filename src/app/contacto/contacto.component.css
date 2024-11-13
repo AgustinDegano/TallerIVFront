@@ -99,6 +99,13 @@ margin: 5px 0;
   padding: 8px;
 }
 
+/* Estilo del botón de envio */
+.button button{
+  background-color: #7fdd81;
+
+}
+
+
 /* Estilo del footer */
 .footer {
 background-color: #060505; 
