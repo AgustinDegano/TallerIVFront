@@ -1,0 +1,58 @@
+/* Barra de menú */
+.navbar {
+    position: fixed; /* Hace que la barra de navegación se quede fija */
+    top: 0; /* La posiciona en la parte superior */
+    left: 0; /* Alinea la navbar a la izquierda */
+    width: 100%; /* Asegura que la navbar ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    background-color: #333; /* Color de fondo (puedes cambiarlo) */
+    padding: 10px 0; /* Ajusta el espaciado alrededor de la navbar */
+  }
+  
+  body {
+    margin-top: 50px; /* Asegura que el contenido no se quede cubierto por la navbar */
+    
+}
+
+.navbar ul {
+list-style: none;
+display: flex;
+justify-content: center;
+margin: 0;
+padding: 0;
+}
+
+.navbar ul li {
+margin: 0 15px;
+}
+
+.navbar ul li a {
+color: white;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+}
+
+.navbar ul li a:hover {
+color: #ddd;
+}
+
+/* Otros estilos */
+
+
+/* Estilo del footer */
+.footer {
+background-color: #060505; 
+color: white;             
+text-align: center;       
+padding: 5px 0 ;           
+position: fixed;          
+bottom: 0;                
+width: 100%;              
+height: 20px; 
+left: 0;                  
+}
+
+.footer p {
+font-size: 10px ;         
+}

@@ -13,10 +13,16 @@
             <li><a href="inicio">Inicio</a></li>
             <li><a href="empresas">Empresas</a></li>
             <li><a href="contacto">Contacto</a></li>
+            <li><a href="login-admins">Admin</a></li>
         </ul>
     </nav>
 
     <!-- Contenido de la página -->
+   
+    <div class="container" id="inicio">
+     <p>
+      Seleccione la ciudad de partida y la ciudad de llegada
+    </p>
     <div class="btn-group">
         <button class="btn btn-secondary btn-lg" type="button">
           Ciudad Origen
@@ -43,12 +49,23 @@
             <li><a class="dropdown-item" href="#">Rosario</a></li>
         </ul>
       </div>
-      <ngb-timepicker [(ngModel)]="time" />
-      <hr/>
-      <ngb-timepicker [(ngModel)]="time" />
-      <hr/>
+      <p>
+        Seleccione el horario deseado de partida y el horario maximo deseado de llegada
+      </p>
+      <div class="selector" id="salida">
+      <ngb-timepicker [(ngModel)]="time" />      <hr/>
+      <p>
+        HORARIO DE SALIDA
+      </p>
+      </div>
+      <div class="selector" id="llegada">
+      <ngb-timepicker [(ngModel)]="time" />      <hr/>
+      <p>
+        HORARIO DE LLEGADA
+      </p>
+      </div>
      <!-- <pre>Selected time: {{ time | json }}</pre>  -->
-      
+    </div>
 </body>
 <!-- Footer -->
 <footer class="footer">

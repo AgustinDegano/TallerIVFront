@@ -12,5 +12,9 @@ import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class InicioComponent {
   time = { hour: 13, minute: 30 }
+  ngOnInit(): void {
+    // No navegar aquí de vuelta a 'inicio', podría causar recursividad
+    // this.router.navigate(['/inicio']);
+  }
 }
 
