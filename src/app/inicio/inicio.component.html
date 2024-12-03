@@ -53,17 +53,16 @@
         Seleccione el horario deseado de partida y el horario maximo deseado de llegada
       </p>
       <div class="selector" id="salida">
-      <ngb-timepicker [(ngModel)]="time" />      <hr/>
-      <p>
-        HORARIO DE SALIDA
-      </p>
+        <ngb-timepicker [(ngModel)]="timeSalida"></ngb-timepicker>
+        <hr />
+        <p>HORARIO DE SALIDA</p>
       </div>
       <div class="selector" id="llegada">
-      <ngb-timepicker [(ngModel)]="time" />      <hr/>
-      <p>
-        HORARIO DE LLEGADA
-      </p>
+        <ngb-timepicker [(ngModel)]="timeLlegada"></ngb-timepicker>
+        <hr />
+        <p>HORARIO DE LLEGADA</p>
       </div>
+      
      <!-- <pre>Selected time: {{ time | json }}</pre>  -->
     </div>
 </body>
