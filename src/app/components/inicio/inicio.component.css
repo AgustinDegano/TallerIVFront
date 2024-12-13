@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-group{
+    display: flexbox;
+    margin: 5px;
+    font-size: 18px; 
+    padding: 12px 15px;
+    background-color: #f64e4e;
+}
+.btn-group .btn{
+    background-color: #f64e4e;
+    border: none;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+.company p {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+#horario {
+    display: flex;
+    margin: 3px;
+    background-color: white;
+}
+#horario p{
+    padding: 20px;
+    padding: 20px;
+    font-size: 18px; 
+    font-weight: bold; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+

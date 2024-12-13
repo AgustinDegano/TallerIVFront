@@ -1,17 +1,17 @@
 /* Barra de menú */
 .navbar {
-    position: fixed; /* Hace que la barra de navegación se quede fija */
-    top: 0; /* La posiciona en la parte superior */
-    left: 0; /* Alinea la navbar a la izquierda */
-    width: 100%; /* Asegura que la navbar ocupe todo el ancho de la pantalla */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
-    background-color: #333; /* Color de fondo (puedes cambiarlo) */
-    padding: 10px 0; /* Ajusta el espaciado alrededor de la navbar */
-  }
+  position: fixed; /* Hace que la barra de navegación se quede fija */
+  top: 0; /* La posiciona en la parte superior */
+  left: 0; /* Alinea la navbar a la izquierda */
+  width: 100%; /* Asegura que la navbar ocupe todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  background-color: #333; /* Color de fondo (puedes cambiarlo) */
+  padding: 10px 0; /* Ajusta el espaciado alrededor de la navbar */
+}
+
+body {
+  margin-top: 50px; /* Asegura que el contenido no se quede cubierto por la navbar */
   
-  body {
-    margin-top: 50px; /* Asegura que el contenido no se quede cubierto por la navbar */
-    
 }
 
 .navbar ul {
@@ -62,14 +62,13 @@ background: #f9f9f9;
 border-radius: 10px;
 box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 text-align: center;
-margin-top: 60px;
+margin-top: 20px;
 }
 
 h1 {
-font-size: 44px;
+font-size: 24px;
 font-weight: bold;
 margin-bottom: 10px;
-
 }
 
 p {
@@ -92,19 +91,6 @@ font-size: 18px;
 font-weight: normal;
 margin: 5px 0;
 }
-
-/* Estilo del cuadro de texto */
-.form-floating{
-
-  padding: 8px;
-}
-
-/* Estilo del botón de envio */
-.button button{
-  background-color: #7fdd81;
-
-}
-
 
 /* Estilo del footer */
 .footer {

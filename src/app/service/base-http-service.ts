@@ -1,15 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BaseHttpService {
-  private apiUrl = "http://localhost:8080/ping";
-  constructor(private httpClient: HttpClient) { }
+  protected apiUrl = "http://localhost:8080/";
+  constructor(protected httpClient: HttpClient) { }
 
-  getData(): Observable<any> {
-    return this.httpClient.get(this.apiUrl, { responseType: "text" });
+  protected buildUrl(endpoint: string): string {
+    return this.apiUrl + endpoint;
+  }
+
+  protected buildUrlWithParams(endpoint: string, params: any): string {
+    let url = this.apiUrl + endpoint;
+    let first = true;
+    for (let key in params) {
+      if (first) {
+        url += "?";
+        first = false;
+      } else {
+        url += "&";
+      }
+      url += key + "=" + params[key];
+    }
+    return url;
   }
 }

@@ -1,19 +1,23 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { EmpresasComponent } from './empresas/empresas.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { LoginAdminsComponent } from './login-admins/login-admins.component';
-import { AbmHorariosComponent } from './abm-horarios/abm-horarios.component';
-
+import { EmpresasComponent } from './components/empresas/empresas.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { LoginAdminsComponent } from './components/login-admins/login-admins.component';
+import { AbmHorariosComponent } from './components/abm-horarios/abm-horarios.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
-    {path: 'empresas', component: EmpresasComponent },
+    {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent},
     {path: 'inicio', component: InicioComponent },
+    {path: 'empresas', component: EmpresasComponent, canActivate: [AuthGuard]},
     {path: 'contacto', component: ContactoComponent},
     {path: 'login-admins', component: LoginAdminsComponent},
     {path: 'abm-horarios', component: AbmHorariosComponent},
-    {path: '', redirectTo: 'inicio', pathMatch: 'full' },
+    {path: '', redirectTo: '/inicio', pathMatch: 'full' },
     // { path: '**', redirectTo: 'inicio' }
 ];
 

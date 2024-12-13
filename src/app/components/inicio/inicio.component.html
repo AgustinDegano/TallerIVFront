@@ -1,0 +1,64 @@
+<div class="btn-group">
+  <button class="btn btn-secondary btn-lg" type="button">
+    Ciudad Origen
+  </button>
+  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+    aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" (click)="ciudadOrigen='Esperanza'">Esperanza</a></li>
+    <li><a class="dropdown-item" (click)="ciudadOrigen='Santa Fe'">Santa Fe</a></li>
+    <li><a class="dropdown-item" (click)="ciudadOrigen='Rosario'">Rosario</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <button class="btn btn-secondary btn-lg" type="button">
+    Ciudad Destino
+  </button>
+  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+    aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" (click)="ciudadDestino='Esperanza'">Esperanza</a></li>
+    <li><a class="dropdown-item" (click)="ciudadDestino='Santa Fe'">Santa Fe</a></li>
+    <li><a class="dropdown-item" (click)="ciudadDestino='Rosario'">Rosario</a></li>
+  </ul>
+</div>
+
+<p>
+  Seleccione el horario deseado de partida y el horario máximo deseado de llegada
+</p>
+<div class="selector" id="salida">
+  <ngb-timepicker [(ngModel)]="timeSalida"></ngb-timepicker>
+  <hr />
+  <p>HORARIO DE SALIDA</p>
+</div>
+<div class="selector" id="llegada">
+  <ngb-timepicker [(ngModel)]="timeSalida"></ngb-timepicker>
+  <hr />
+  <p>HORARIO DE LLEGADA</p>
+</div>
+
+<!-- Botón para buscar resultados -->
+<button class="btn btn-primary" (click)="searchSchedule()">Buscar</button>
+
+<h2>Resultados:</h2>
+@for (schedule of schedules; track schedule.id) {
+<div>
+  <ul>
+    <li>
+      <strong>Ruta:</strong> {{ schedule.ruta.ciudadOrigen.nombre }} a {{ schedule.ruta.ciudadDestino.nombre }}<br>
+      <strong>Hora de salida:</strong> {{ schedule.horaSalida }}<br>
+      <strong>Hora de llegada:</strong> {{ schedule.horaLlegada }}<br>
+      <strong>Empresa:</strong> {{ schedule.empresa.nombre }}<br>
+      <strong>Teléfono:</strong> {{ schedule.empresa.telefono }}<br>
+      <strong>Dirección:</strong> {{ schedule.empresa.direccion }}<br>
+      <hr />
+    </li>
+  </ul>
+</div>
+} @empty {
+<p>No hay resultados disponibles para los criterios seleccionados.</p>
+}

@@ -1,0 +1,18 @@
+<div class="container" id="empresas">
+    <h1>Empresas:</h1>
+    <div class="logo-container">
+        <i class="fa-solid fa-bus"></i>
+    </div>
+    <p>Estas son las empresas que hay disponibles en este momento para los recorridos, esta lista puede sufrir cambios sin previo aviso.</p>
+
+    <section class="route">
+        <h2>Trayecto Esperanza - Santa Fe / Santa Fe - Esperanza:</h2>
+        @for (empresa of empresas; track empresas) {
+            <div class="empresa">
+                <p>{{ empresa.nombre }} - {{ empresa.telefono }} - {{ empresa.direccion }}</p>
+            </div>
+        } @empty {
+            <div class="empresa">No hay empresas disponibles para este trayecto.</div>
+        }
+    </section>
+</div>
