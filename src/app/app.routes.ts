@@ -17,7 +17,7 @@ export const routes: Routes = [
     {path: 'contacto', component: ContactoComponent},
     {path: 'login-admins', component: LoginAdminsComponent},
     {path: 'abm-horarios', component: AbmHorariosComponent},
-    {path: '', redirectTo: '/inicio', pathMatch: 'full' },
+    {path: '', redirectTo: '/login', pathMatch: 'full' },
     // { path: '**', redirectTo: 'inicio' }
 ];
 

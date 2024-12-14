@@ -51,8 +51,8 @@ export class InicioComponent {
       .getSchdeules(
         this.ciudadOrigen,
         this.ciudadDestino,
-        this.timeSalida.hour,
-        this.timeSalida.minute
+        `${this.timeSalida.hour}:${this.timeSalida.minute}`,
+        `${this.timeLlegada.hour}:${this.timeLlegada.minute}`
       )
       .subscribe(
         (response) => {
