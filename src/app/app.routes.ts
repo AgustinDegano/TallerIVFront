@@ -4,7 +4,6 @@ import { EmpresasComponent } from './components/empresas/empresas.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { LoginAdminsComponent } from './components/login-admins/login-admins.component';
-import { AbmHorariosComponent } from './components/abm-horarios/abm-horarios.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from './auth.guard';
@@ -16,7 +15,6 @@ export const routes: Routes = [
     {path: 'empresas', component: EmpresasComponent, canActivate: [AuthGuard]},
     {path: 'contacto', component: ContactoComponent},
     {path: 'login-admins', component: LoginAdminsComponent},
-    {path: 'abm-horarios', component: AbmHorariosComponent},
     {path: '', redirectTo: '/login', pathMatch: 'full' },
     // { path: '**', redirectTo: 'inicio' }
 ];

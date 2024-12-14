@@ -1,17 +1,97 @@
-<div class="container" id="login-admins">
-    <i class="fa-solid fa-user-tie" style="font-size: 2rem; color: #007bff;"></i>
-    <H2>Inicio sesión Admins</H2>
-    <form class="row g-3">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Direccion Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="juan@ejemplo.com">
-        </div>
-        <div class="col-auto">
-            <label for="inputPassword2" class="visually-hidden">Password</label>
-            <input type="password" class="form-control" id="inputPassword2" placeholder="Contraseña">
-        </div>
-        <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Enviar</button>
-        </div>
+<div class="container">
+    <!-- Sección Crear Empresa -->
+    <div class="section">
+      <h3>Crear Empresa</h3>
+      <form>
+        <input type="text" class="form-control" placeholder="Nombre de la empresa">
+        <input type="text" class="form-control" placeholder="Teléfono">
+        <input type="text" class="form-control" placeholder="Dirección">
+        <input type="text" class="form-control" placeholder="Id Ruta">
+        <button type="submit">Crear Empresa</button>
+      </form>
+    </div>
+  
+    <!-- Sección Crear Ruta -->
+    <div class="section">
+        <h3>Crear Ruta</h3>
+        <form>
+          <!-- Campo para escribir una nueva ruta -->
+          <input type="text" class="form-control" placeholder="Escribir ciudad origen">
+      
+          <!-- Campo para escribir ciudad destino -->
+          <input type="text" class="form-control" placeholder="Escribir ciudad destino">
+      
+          <!-- Botón para enviar la nueva ruta -->
+          <button type="submit">Crear Ruta</button>
+        </form>
+      </div>
+
+  <!-- Sección para crear un nuevo Horario -->
+  <div class="section">
+    <h3>Crear Horario</h3>
+    <form>
+      <div class="mb-3">
+        <label for="horarioSalida" class="form-label">Hora de Salida</label>
+        <input type="time" id="horarioSalida" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="horarioLlegada" class="form-label">Hora de Llegada</label>
+        <input type="time" id="horarioLlegada" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="horarioRuta" class="form-label">Ruta, select by Id</label>
+        <select id="horarioRuta" class="form-control">
+          <option value="1">Id Ruta 1</option>
+          <option value="2">Id Ruta 2</option>
+          <option value="3">Id Ruta 3</option>
+          <option value="4">Id Ruta 4</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="horarioEmpresa" class="form-label">Empresa</label>
+        <select id="horarioEmpresa" class="form-control">
+          <option value="1">Nece</option>
+          <option value="2">Ruta 70</option>
+          <option value="3">Tata Rapido</option>
+          <option value="4">Micro</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Crear Horario</button>
     </form>
+  </div>
+
+  <!-- Sección para listar y administrar las Empresas existentes -->
+  <div class="empresa-lista">
+    <h3>Empresas Existentes</h3>
+    <table>
+      <tr>
+        <td>Nece</td>
+        <td class="btn-group">
+          <button class="btn">Editar</button>
+          <button class="btn">Borrar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Ruta 70</td>
+        <td class="btn-group">
+          <button class="btn">Editar</button>
+          <button class="btn">Borrar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Tata Rapido</td>
+        <td class="btn-group">
+          <button class="btn">Editar</button>
+          <button class="btn">Borrar</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Micro</td>
+        <td class="btn-group">
+          <button class="btn">Editar</button>
+          <button class="btn">Borrar</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>

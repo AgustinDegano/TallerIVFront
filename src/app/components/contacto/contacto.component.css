@@ -1,107 +1,41 @@
-/* Barra de menú */
-.navbar {
-  position: fixed; /* Hace que la barra de navegación se quede fija */
-  top: 0; /* La posiciona en la parte superior */
-  left: 0; /* Alinea la navbar a la izquierda */
-  width: 100%; /* Asegura que la navbar ocupe todo el ancho de la pantalla */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
-  background-color: #333; /* Color de fondo (puedes cambiarlo) */
-  padding: 10px 0; /* Ajusta el espaciado alrededor de la navbar */
-}
-
-body {
-  margin-top: 50px; /* Asegura que el contenido no se quede cubierto por la navbar */
-  
-}
-
-.navbar ul {
-list-style: none;
-display: flex;
-justify-content: center;
-margin: 0;
-padding: 0;
-}
-
-.navbar ul li {
-margin: 0 15px;
-}
-
-.navbar ul li a {
-color: white;
-text-decoration: none;
-font-size: 18px;
-font-weight: bold;
-}
-
-.navbar ul li a:hover {
-color: #ddd;
-}
-
-/* Otros estilos */
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: Arial, sans-serif;
-background: linear-gradient(to right, #bcbcbc, #e6e6e6);
-color: #333;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-min-height: 100vh;
-}
-
-.container {
-max-width: 800px;
-padding: 20px;
-background: #f9f9f9;
-border-radius: 10px;
-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-text-align: center;
-margin-top: 60px;
-}
-
-h1 {
-font-size: 44px;
-font-weight: bold;
-margin-bottom: 10px;
-
-}
-
-p {
-font-size: 16px;
-margin-bottom: 20px;
-}
-
-.route {
-margin-bottom: 30px;
-}
-
-.route h2 {
-font-size: 20px;
-font-weight: bold;
-margin-bottom: 10px;
-}
-
-.company p {
-font-size: 18px;
-font-weight: normal;
-margin: 5px 0;
-}
-
 /* Estilo del cuadro de texto */
-.form-floating{
-
-padding: 8px;
+.form-floating {
+  padding: 8px;
+  margin-bottom: 15px; /* Espacio inferior para mejor diseño */
+  border: 1px solid #ddd; /* Un borde suave */
+  border-radius: 5px; /* Redondeo de bordes */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
-/* Estilo del botón de envio */
-.button button{
-background-color: #7fdd81;
-
+/* Estilo del botón de envío */
+.button button {
+  background-color: #7fdd81;
+  color: #fff; /* Texto en blanco */
+  padding: 10px 15px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Redondeo de bordes */
+  cursor: pointer; /* Indicador de que es clickeable */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  transition: background-color 0.3s ease; /* Transición de color para el efecto de hover */
 }
 
+.button button:hover {
+  background-color: #6cb771; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilo de los inputs */
+input[type="email"], input[type="text"], textarea {
+  width: 100%; /* Ancho total del elemento */
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd; /* Borde claro */
+  border-radius: 5px; /* Redondeo de bordes */
+  box-sizing: border-box; /* Ajuste del padding y border */
+  font-size: 16px; /* Tamaño de fuente para mejorar la legibilidad */
+}
+
+input[type="email"]:focus, input[type="text"]:focus, textarea:focus {
+  border-color: #66afe9; /* Borde de enfoque */
+  outline: none; /* Eliminar el borde azul del navegador */
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Sombra de enfoque */
+}

@@ -1,44 +1,42 @@
 <div class="btn-group">
-  <button class="btn btn-secondary btn-lg" type="button">
-    Ciudad Origen
-  </button>
-  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-    aria-expanded="false">
+  <button class="btn btn-secondary btn-lg" type="button" [innerText]="selectedCiudadOrigen"></button>
+  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" (click)="ciudadOrigen='Esperanza'">Esperanza</a></li>
-    <li><a class="dropdown-item" (click)="ciudadOrigen='Santa Fe'">Santa Fe</a></li>
-    <li><a class="dropdown-item" (click)="ciudadOrigen='Rosario'">Rosario</a></li>
+    <li><a class="dropdown-item" (click)="onSelectCiudadOrigen('Esperanza')">Esperanza</a></li>
+    <li><a class="dropdown-item" (click)="onSelectCiudadOrigen('Santa Fe')">Santa Fe</a></li>
+    <li><a class="dropdown-item" (click)="onSelectCiudadOrigen('Rosario')">Rosario</a></li>
   </ul>
 </div>
+
 <div class="btn-group">
-  <button class="btn btn-secondary btn-lg" type="button">
-    Ciudad Destino
-  </button>
-  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-    aria-expanded="false">
+  <button class="btn btn-secondary btn-lg" type="button" [innerText]="selectedCiudadDestino"></button>
+  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
     <span class="visually-hidden">Toggle Dropdown</span>
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" (click)="ciudadDestino='Esperanza'">Esperanza</a></li>
-    <li><a class="dropdown-item" (click)="ciudadDestino='Santa Fe'">Santa Fe</a></li>
-    <li><a class="dropdown-item" (click)="ciudadDestino='Rosario'">Rosario</a></li>
+    <li><a class="dropdown-item" (click)="onSelectCiudadDestino('Esperanza')">Esperanza</a></li>
+    <li><a class="dropdown-item" (click)="onSelectCiudadDestino('Santa Fe')">Santa Fe</a></li>
+    <li><a class="dropdown-item" (click)="onSelectCiudadDestino('Rosario')">Rosario</a></li>
   </ul>
 </div>
+
 
 <p>
   Seleccione el horario deseado de partida y el horario máximo deseado de llegada
 </p>
 <div class="selector" id="salida">
+  <p>HORARIO DE SALIDA</p>
   <ngb-timepicker [(ngModel)]="timeSalida"></ngb-timepicker>
   <hr />
-  <p>HORARIO DE SALIDA</p>
+  
 </div>
 <div class="selector" id="llegada">
+  <p>HORARIO DE LLEGADA</p>
   <ngb-timepicker [(ngModel)]="timeLlegada"></ngb-timepicker>
   <hr />
-  <p>HORARIO DE LLEGADA</p>
+  
 </div>
 
 <!-- Botón para buscar resultados -->
@@ -53,8 +51,6 @@
       <strong>Hora de salida:</strong> {{ schedule.horaSalida }}<br>
       <strong>Hora de llegada:</strong> {{ schedule.horaLlegada }}<br>
       <strong>Empresa:</strong> {{ schedule.empresa.nombre }}<br>
-      <strong>Teléfono:</strong> {{ schedule.empresa.telefono }}<br>
-      <strong>Dirección:</strong> {{ schedule.empresa.direccion }}<br>
       <hr />
     </li>
   </ul>

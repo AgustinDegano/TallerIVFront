@@ -24,6 +24,11 @@
     background-color: #f64e4e;
     border: none;
 }
+.btn-group .dropdown-menu .dropdown-item:hover {
+    background-color: #007bff; /* Cambiar el color de fondo al pasar el mouse */
+    color: white; /* Cambiar el color del texto */
+}
+
 
 p {
     font-size: 16px;
@@ -37,17 +42,31 @@ p {
     margin: 5px 0;
 }
 
-#horario {
+
+/* Estilo para centrar el contenido dentro del div de selector */
+.selector {
     display: flex;
-    margin: 3px;
-    background-color: white;
+    flex-direction: column;  /* Orientación vertical de los elementos dentro del div */
+    align-items: center;  /* Centra el contenido horizontalmente */
+    justify-content: center;  /* Centra el contenido verticalmente */
+    margin: 10px 0;  /* Espaciado superior e inferior */
+  }
+
+.selector p{
+    font-weight: bold;
+    text-decoration: underline;
 }
-#horario p{
-    padding: 20px;
-    padding: 20px;
-    font-size: 18px; 
-    font-weight: bold; 
-    margin-top: 10px;
-    margin-bottom: 10px;
+  
+  .ngb-timepicker {
+    width: 100%;  /* Ancho completo */
+    display: block;  /* Asegura que cubra el ancho del div */
+  }
+  /* Estilo para el botón "Buscar" */
+.btn-primary {
+    padding: 12px 20px; /* Aumenta el padding para hacer el botón más grande */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    width: auto; /* Mantiene el ancho del botón dinámico */
 }
+
 

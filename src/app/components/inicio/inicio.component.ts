@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgbTimepickerModule } from '@ng-bootstrap/ng-bootstrap';
-import { ButtonsComponent } from '../buttons/buttons.component';
 import { SchedulesService } from '../../service/schedules/schedules.service';
-import { DatePipe } from '@angular/common';
-
 
 export interface ScheduleResponse {
   id: number;
@@ -34,23 +31,31 @@ export interface ScheduleResponse {
   standalone: true,
   imports: [NgbTimepickerModule, FormsModule],
   templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.css',
+  styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent {
   timeSalida = { hour: 13, minute: 30 };
   timeLlegada = { hour: 15, minute: 45 };
-  ciudadOrigen: string = '';
-  ciudadDestino: string = '';
+  selectedCiudadOrigen: string = 'Ciudad Origen';
+  selectedCiudadDestino: string = 'Ciudad Destino';
 
   schedules: ScheduleResponse[] = [];
 
   constructor(private scheduleService: SchedulesService) {}
 
+  onSelectCiudadOrigen(ciudad: string): void {
+    this.selectedCiudadOrigen = ciudad;
+  }
+
+  onSelectCiudadDestino(ciudad: string): void {
+    this.selectedCiudadDestino = ciudad;
+  }
+
   searchSchedule(): void {
     this.scheduleService
       .getSchdeules(
-        this.ciudadOrigen,
-        this.ciudadDestino,
+        this.selectedCiudadOrigen,
+        this.selectedCiudadDestino,
         `${this.timeSalida.hour}:${this.timeSalida.minute}`,
         `${this.timeLlegada.hour}:${this.timeLlegada.minute}`
       )
