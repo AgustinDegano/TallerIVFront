@@ -13,6 +13,7 @@ export interface Empresa {
   providedIn: 'root',
 })
 export class EmpresasService {
+  [x: string]: any;
   private apiUrl = 'http://localhost:8080/empresas';
   constructor(private httpClient: HttpClient) {}
 
@@ -30,4 +31,10 @@ export class EmpresasService {
   deleteEmpresa(id: number): Observable<void> {
     return this.httpClient.delete<void>(`${this.apiUrl}/${id}`);
   }
+// Objeto para la nueva empresa
+
+createEmpresa(empresa: Empresa): Observable<Empresa> {
+  return this.httpClient.post<Empresa>(this.apiUrl, empresa);
+}
+
 }

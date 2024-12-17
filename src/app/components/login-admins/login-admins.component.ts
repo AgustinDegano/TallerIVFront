@@ -55,4 +55,17 @@ export class LoginAdminsComponent implements OnInit {
       });
     }
   }
+
+  newEmpresa: Empresa = { id: 0 , nombre: '', telefono: '', direccion: '' }; // Objeto para la nueva empresa
+
+  addEmpresa(): void {
+    this.empresaService.createEmpresa(this.newEmpresa).subscribe({
+      next: () => {
+        this.loadEmpresas(); // Recargar la lista
+        this.newEmpresa = { id: 0 , nombre: '', telefono: '', direccion: '' }; // Resetear formulario
+      },
+      error: (err) => console.error('Error al agregar empresa:', err),
+    });
+  }
+
 }

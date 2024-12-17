@@ -47,4 +47,23 @@
       </form>
     </div>
   </div>
+  <!-- Formulario para agregar nueva empresa -->
+<div>
+  <h2>Agregar Empresa</h2>
+<form (ngSubmit)="addEmpresa()" #empresaForm="ngForm">
+  <label>
+    Nombre:
+    <input [(ngModel)]="newEmpresa.nombre" name="nombre" required />
+  </label>
+  <label>
+    Teléfono:
+    <input [(ngModel)]="newEmpresa.telefono" name="telefono" required />
+  </label>
+  <label>
+    Dirección:
+    <input [(ngModel)]="newEmpresa.direccion" name="direccion" required />
+  </label>
+  <button type="submit" [disabled]="!empresaForm.valid">Agregar Empresa</button>
+</form>
+
   
