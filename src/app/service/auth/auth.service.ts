@@ -3,6 +3,7 @@ import { BaseHttpService } from '../base-http-service';
 
 interface LoginResponse {
   token: string;
+  role: string;
 }
 
 @Injectable({

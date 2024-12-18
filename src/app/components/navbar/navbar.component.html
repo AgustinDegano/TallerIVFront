@@ -3,6 +3,8 @@
         <li><a href="inicio">Inicio</a></li>
         <li><a href="empresas">Empresas</a></li>
         <li><a href="contacto">Contacto</a></li>
+        @if (userRole == 'ADMIN'){
         <li><a href="login-admins">Admin</a></li>
+        }
     </ul>
 </nav>

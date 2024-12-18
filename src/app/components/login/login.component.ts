@@ -22,6 +22,7 @@ export class LoginComponent {
       response => {
         if (response.token) {
           localStorage.setItem('token', response.token);
+          localStorage.setItem('role', response.role ? response.role : 'user');
           this.router.navigate(['/inicio']);
         } else {
           alert('Login failed');
